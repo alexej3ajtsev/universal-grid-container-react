@@ -1,0 +1,50 @@
+.App {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  text-align: center;
+}
+
+.grid-wrapper {
+  width: 100%;
+  max-width: 960px;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 14px;
+  outline: 1px solid blue;
+  animation: showContainer 300ms linear;
+  animation-fill-mode: forwards;
+}
+
+.card {
+  width: 300px;
+  background: #ddd;
+}
+
+@keyframes showContainer {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.grid-wrapper > * > * h2 {
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 220px;
+  }
+}
